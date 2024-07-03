@@ -24,7 +24,6 @@ There are a number of ways to install Elasticsearch. Cloud is best for most use-
 ### Connect to Elasticsearch
 
 
-
 This app requires the following environment variables to be set to connect to Elasticsearch hosted on Elastic Cloud:
 
 ```sh
@@ -32,7 +31,7 @@ export ELASTIC_CLOUD_ID=...
 export ELASTIC_API_KEY=...
 ```
 
-For on prem:
+#### For Elastic On-prem with USERNAME and PASS
 
 ```sh
 ELASTICSEARCH_URL=
@@ -209,7 +208,7 @@ pip install -r requirements.txt
 cd frontend && yarn && cd ..
 ```
 
-#### Ingest data
+#### Ingest data initial
 
 You can index the sample data from the provided .json files in the `data` folder:
 
@@ -240,6 +239,8 @@ cd frontend && yarn start
 You can now access the frontend at http://localhost:3000. Changes are automatically reloaded.
 
 #### Ingest more data 
+
+
 I've created more dummy data in the data/ folder named *more_data.json*. Perform the following:
 * Edit the data/index_data.py and look for the ```FILE = os.getenv("FILE", f"{os.path.dirname(__file__)}/data.json")``` then change json file to ```more_data.json```
 * Run the following command from the rag app folder:
